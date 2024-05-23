@@ -52,18 +52,7 @@ menu = {
 
 # 1. Set up order list. Order list will store a list of dictionaries for
 # menu item name, item price, and quantity ordered
-order_list=[
-    # {
-    # "Item name": "string",
-    # "Price": float,
-    # "Quantity": int
-    # },
-    # {
-    # "Item name": "string",
-    # "Price": float,
-    # "Quantity": int
-    # },
-]
+order_list=[]
 
 # Launch the store and present a greeting to the customer
 print("Welcome to the variety food truck.")
@@ -150,23 +139,13 @@ while place_order:
                     
                     else:
                         quantity=int(quantity)
-                    # Add the item name, price, and quantity to the order list
-                    # for value in menu_items[menu_selection].values():
-                    #     order_list[i][0]=cust_item
-                    #     order_list[i][1]=menu_items[1][value]
-                    #     order_list[i][2]=quantity
-                    #     i+=1
-                    #     #print(order_list)
-                    #     for list in order_list:
-                    #         print(list)
+
                     order_list.append({
                         "Item name": cust_item["Item name"],
                         "Price": cust_item["Price"],
                         "Quantity": quantity
                     })
-                    # print("Current order list:")
-                    # for order in order_list:
-                    #     print(order)
+
 
 
                     # Tell the customer that their input isn't valid
@@ -227,10 +206,7 @@ for order in order_list:
     price = order["Price"]
     quantity = order["Quantity"]
 #     
-#     item_name=order_list[0][value]
-#     price=order_list[1][value]
-#     quantity=order_list[2][value]
-    # 8. Calculate the number of spaces for formatted printing
+
     num_item_spaces = 25 - len(item_name)
     num_item_spaces2= 6 - len(str(price))
     # 9. Create space strings
